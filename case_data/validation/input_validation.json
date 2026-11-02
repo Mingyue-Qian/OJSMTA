@@ -1,0 +1,45 @@
+{
+  "cases": {
+    "single_wave": {
+      "probability_rows": 40,
+      "probability_row_sum_max_error": 0.0,
+      "restoration_rows": 100,
+      "restoration_row_sum_max_error": 1.1102230246251565e-16,
+      "all_nonnegative": true,
+      "copied_workbook_sha256_matches_source": true
+    },
+    "algorithm_comparison": {
+      "probability_rows": 40,
+      "probability_row_sum_max_error": 0.0,
+      "restoration_rows": 100,
+      "restoration_row_sum_max_error": 1.1102230246251565e-16,
+      "all_nonnegative": true,
+      "copied_workbook_sha256_matches_source": true
+    },
+    "joint_two_stage": {
+      "probability_rows": 40,
+      "probability_row_sum_max_error": 0.0,
+      "restoration_rows": 100,
+      "restoration_row_sum_max_error": 1.1102230246251565e-16,
+      "all_nonnegative": true,
+      "copied_workbook_sha256_matches_source": true
+    },
+    "multi_wave": {
+      "probability_rows": 40,
+      "probability_row_sum_max_error": 0.0,
+      "restoration_rows": 100,
+      "restoration_row_sum_max_error": 1.1102230246251565e-16,
+      "all_nonnegative": true,
+      "copied_workbook_sha256_matches_source": true
+    },
+    "deferred_task_reallocation": {
+      "probability_rows": 40,
+      "probability_row_sum_max_error": 0.0,
+      "restoration_rows": 100,
+      "restoration_row_sum_max_error": 1.1102230246251565e-16,
+      "all_nonnegative": true,
+      "copied_workbook_sha256_matches_source": true
+    }
+  },
+  "base_Sheet1_to_Sheet14_numerically_identical": true
+}

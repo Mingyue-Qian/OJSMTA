@@ -1,0 +1,430 @@
+{
+  "manuscript": "Joint Optimization of Selective Maintenance and Task Allocation for a Carrier Unmanned Aircraft Fleet under Multi-Wave Sorties",
+  "data_type": "manually specified synthetic planning instances",
+  "not_empirically_calibrated": true,
+  "subsystem_order": [
+    "DTC",
+    "FCN",
+    "COM",
+    "NVG"
+  ],
+  "state_order": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "state_direction": "1 worst/absorbing failure to 5 best",
+  "weibull_time_unit_assumption": "hour",
+  "schedule_time_unit": "second in run archives, minute in manuscript figures",
+  "coordinate_unit": "km",
+  "maintenance_cost_unit": "CNY",
+  "cases": {
+    "single_wave": {
+      "workbook": "raw/single_wave.xlsx",
+      "sha256": "b975d9fc5c1b1422ce549756b7d435ec9b2d145da984df120c55410e62460183",
+      "sheets": {
+        "Sheet1": {
+          "rows_including_title_and_header": 12,
+          "columns": 6,
+          "meaning": "initial probabilities for subsystem 1"
+        },
+        "Sheet2": {
+          "rows_including_title_and_header": 12,
+          "columns": 6,
+          "meaning": "initial probabilities for subsystem 2"
+        },
+        "Sheet3": {
+          "rows_including_title_and_header": 12,
+          "columns": 6,
+          "meaning": "initial probabilities for subsystem 3"
+        },
+        "Sheet4": {
+          "rows_including_title_and_header": 12,
+          "columns": 6,
+          "meaning": "initial probabilities for subsystem 4"
+        },
+        "Sheet5": {
+          "rows_including_title_and_header": 12,
+          "columns": 4,
+          "meaning": "aircraft-specific Weibull parameters for subsystem 1"
+        },
+        "Sheet6": {
+          "rows_including_title_and_header": 12,
+          "columns": 4,
+          "meaning": "aircraft-specific Weibull parameters for subsystem 2"
+        },
+        "Sheet7": {
+          "rows_including_title_and_header": 12,
+          "columns": 4,
+          "meaning": "aircraft-specific Weibull parameters for subsystem 3"
+        },
+        "Sheet8": {
+          "rows_including_title_and_header": 12,
+          "columns": 4,
+          "meaning": "aircraft-specific Weibull parameters for subsystem 4"
+        },
+        "Sheet9": {
+          "rows_including_title_and_header": 22,
+          "columns": 4,
+          "meaning": "maintenance operations, costs (CNY) and durations (min)"
+        },
+        "Sheet10": {
+          "rows_including_title_and_header": 62,
+          "columns": 20,
+          "meaning": "task type, state requirements, duration (s), location (km)"
+        },
+        "Sheet11": {
+          "rows_including_title_and_header": 62,
+          "columns": 6,
+          "meaning": "nominal task benefits or state-dependent benefit inputs"
+        },
+        "Sheet12": {
+          "rows_including_title_and_header": 6,
+          "columns": 6,
+          "meaning": "post-task state utility weights"
+        },
+        "Sheet13": {
+          "rows_including_title_and_header": 12,
+          "columns": 5,
+          "meaning": "per-aircraft capacities by task class"
+        },
+        "Sheet14": {
+          "rows_including_title_and_header": 102,
+          "columns": 8,
+          "meaning": "maintenance restoration probability matrices"
+        },
+        "Sheet15": {
+          "rows_including_title_and_header": 0,
+          "columns": 0,
+          "meaning": "additional workbook information; preserved without reinterpretation"
+        }
+      }
+    },
+    "algorithm_comparison": {
+      "workbook": "raw/algorithm_comparison.xlsx",
+      "sha256": "b975d9fc5c1b1422ce549756b7d435ec9b2d145da984df120c55410e62460183",
+      "sheets": {
+        "Sheet1": {
+          "rows_including_title_and_header": 12,
+          "columns": 6,
+          "meaning": "initial probabilities for subsystem 1"
+        },
+        "Sheet2": {
+          "rows_including_title_and_header": 12,
+          "columns": 6,
+          "meaning": "initial probabilities for subsystem 2"
+        },
+        "Sheet3": {
+          "rows_including_title_and_header": 12,
+          "columns": 6,
+          "meaning": "initial probabilities for subsystem 3"
+        },
+        "Sheet4": {
+          "rows_including_title_and_header": 12,
+          "columns": 6,
+          "meaning": "initial probabilities for subsystem 4"
+        },
+        "Sheet5": {
+          "rows_including_title_and_header": 12,
+          "columns": 4,
+          "meaning": "aircraft-specific Weibull parameters for subsystem 1"
+        },
+        "Sheet6": {
+          "rows_including_title_and_header": 12,
+          "columns": 4,
+          "meaning": "aircraft-specific Weibull parameters for subsystem 2"
+        },
+        "Sheet7": {
+          "rows_including_title_and_header": 12,
+          "columns": 4,
+          "meaning": "aircraft-specific Weibull parameters for subsystem 3"
+        },
+        "Sheet8": {
+          "rows_including_title_and_header": 12,
+          "columns": 4,
+          "meaning": "aircraft-specific Weibull parameters for subsystem 4"
+        },
+        "Sheet9": {
+          "rows_including_title_and_header": 22,
+          "columns": 4,
+          "meaning": "maintenance operations, costs (CNY) and durations (min)"
+        },
+        "Sheet10": {
+          "rows_including_title_and_header": 62,
+          "columns": 20,
+          "meaning": "task type, state requirements, duration (s), location (km)"
+        },
+        "Sheet11": {
+          "rows_including_title_and_header": 62,
+          "columns": 6,
+          "meaning": "nominal task benefits or state-dependent benefit inputs"
+        },
+        "Sheet12": {
+          "rows_including_title_and_header": 6,
+          "columns": 6,
+          "meaning": "post-task state utility weights"
+        },
+        "Sheet13": {
+          "rows_including_title_and_header": 12,
+          "columns": 5,
+          "meaning": "per-aircraft capacities by task class"
+        },
+        "Sheet14": {
+          "rows_including_title_and_header": 102,
+          "columns": 8,
+          "meaning": "maintenance restoration probability matrices"
+        },
+        "Sheet15": {
+          "rows_including_title_and_header": 0,
+          "columns": 0,
+          "meaning": "additional workbook information; preserved without reinterpretation"
+        }
+      }
+    },
+    "joint_two_stage": {
+      "workbook": "raw/joint_two_stage.xlsx",
+      "sha256": "b975d9fc5c1b1422ce549756b7d435ec9b2d145da984df120c55410e62460183",
+      "sheets": {
+        "Sheet1": {
+          "rows_including_title_and_header": 12,
+          "columns": 6,
+          "meaning": "initial probabilities for subsystem 1"
+        },
+        "Sheet2": {
+          "rows_including_title_and_header": 12,
+          "columns": 6,
+          "meaning": "initial probabilities for subsystem 2"
+        },
+        "Sheet3": {
+          "rows_including_title_and_header": 12,
+          "columns": 6,
+          "meaning": "initial probabilities for subsystem 3"
+        },
+        "Sheet4": {
+          "rows_including_title_and_header": 12,
+          "columns": 6,
+          "meaning": "initial probabilities for subsystem 4"
+        },
+        "Sheet5": {
+          "rows_including_title_and_header": 12,
+          "columns": 4,
+          "meaning": "aircraft-specific Weibull parameters for subsystem 1"
+        },
+        "Sheet6": {
+          "rows_including_title_and_header": 12,
+          "columns": 4,
+          "meaning": "aircraft-specific Weibull parameters for subsystem 2"
+        },
+        "Sheet7": {
+          "rows_including_title_and_header": 12,
+          "columns": 4,
+          "meaning": "aircraft-specific Weibull parameters for subsystem 3"
+        },
+        "Sheet8": {
+          "rows_including_title_and_header": 12,
+          "columns": 4,
+          "meaning": "aircraft-specific Weibull parameters for subsystem 4"
+        },
+        "Sheet9": {
+          "rows_including_title_and_header": 22,
+          "columns": 4,
+          "meaning": "maintenance operations, costs (CNY) and durations (min)"
+        },
+        "Sheet10": {
+          "rows_including_title_and_header": 62,
+          "columns": 20,
+          "meaning": "task type, state requirements, duration (s), location (km)"
+        },
+        "Sheet11": {
+          "rows_including_title_and_header": 62,
+          "columns": 6,
+          "meaning": "nominal task benefits or state-dependent benefit inputs"
+        },
+        "Sheet12": {
+          "rows_including_title_and_header": 6,
+          "columns": 6,
+          "meaning": "post-task state utility weights"
+        },
+        "Sheet13": {
+          "rows_including_title_and_header": 12,
+          "columns": 5,
+          "meaning": "per-aircraft capacities by task class"
+        },
+        "Sheet14": {
+          "rows_including_title_and_header": 102,
+          "columns": 8,
+          "meaning": "maintenance restoration probability matrices"
+        },
+        "Sheet15": {
+          "rows_including_title_and_header": 0,
+          "columns": 0,
+          "meaning": "additional workbook information; preserved without reinterpretation"
+        }
+      }
+    },
+    "multi_wave": {
+      "workbook": "raw/multi_wave.xlsx",
+      "sha256": "a56ffabd55a264af69e302da2904df75005686f4f9042d635a7e4b826c44c52b",
+      "sheets": {
+        "Sheet1": {
+          "rows_including_title_and_header": 12,
+          "columns": 6,
+          "meaning": "initial probabilities for subsystem 1"
+        },
+        "Sheet2": {
+          "rows_including_title_and_header": 12,
+          "columns": 6,
+          "meaning": "initial probabilities for subsystem 2"
+        },
+        "Sheet3": {
+          "rows_including_title_and_header": 12,
+          "columns": 6,
+          "meaning": "initial probabilities for subsystem 3"
+        },
+        "Sheet4": {
+          "rows_including_title_and_header": 12,
+          "columns": 6,
+          "meaning": "initial probabilities for subsystem 4"
+        },
+        "Sheet5": {
+          "rows_including_title_and_header": 12,
+          "columns": 4,
+          "meaning": "aircraft-specific Weibull parameters for subsystem 1"
+        },
+        "Sheet6": {
+          "rows_including_title_and_header": 12,
+          "columns": 4,
+          "meaning": "aircraft-specific Weibull parameters for subsystem 2"
+        },
+        "Sheet7": {
+          "rows_including_title_and_header": 12,
+          "columns": 4,
+          "meaning": "aircraft-specific Weibull parameters for subsystem 3"
+        },
+        "Sheet8": {
+          "rows_including_title_and_header": 12,
+          "columns": 4,
+          "meaning": "aircraft-specific Weibull parameters for subsystem 4"
+        },
+        "Sheet9": {
+          "rows_including_title_and_header": 22,
+          "columns": 4,
+          "meaning": "maintenance operations, costs (CNY) and durations (min)"
+        },
+        "Sheet10": {
+          "rows_including_title_and_header": 62,
+          "columns": 20,
+          "meaning": "task type, state requirements, duration (s), location (km)"
+        },
+        "Sheet11": {
+          "rows_including_title_and_header": 62,
+          "columns": 6,
+          "meaning": "nominal task benefits or state-dependent benefit inputs"
+        },
+        "Sheet12": {
+          "rows_including_title_and_header": 6,
+          "columns": 6,
+          "meaning": "post-task state utility weights"
+        },
+        "Sheet13": {
+          "rows_including_title_and_header": 12,
+          "columns": 5,
+          "meaning": "per-aircraft capacities by task class"
+        },
+        "Sheet14": {
+          "rows_including_title_and_header": 102,
+          "columns": 8,
+          "meaning": "maintenance restoration probability matrices"
+        },
+        "Sheet15": {
+          "rows_including_title_and_header": 0,
+          "columns": 0,
+          "meaning": "additional workbook information; preserved without reinterpretation"
+        }
+      }
+    },
+    "deferred_task_reallocation": {
+      "workbook": "raw/deferred_task_reallocation.xlsx",
+      "sha256": "b975d9fc5c1b1422ce549756b7d435ec9b2d145da984df120c55410e62460183",
+      "sheets": {
+        "Sheet1": {
+          "rows_including_title_and_header": 12,
+          "columns": 6,
+          "meaning": "initial probabilities for subsystem 1"
+        },
+        "Sheet2": {
+          "rows_including_title_and_header": 12,
+          "columns": 6,
+          "meaning": "initial probabilities for subsystem 2"
+        },
+        "Sheet3": {
+          "rows_including_title_and_header": 12,
+          "columns": 6,
+          "meaning": "initial probabilities for subsystem 3"
+        },
+        "Sheet4": {
+          "rows_including_title_and_header": 12,
+          "columns": 6,
+          "meaning": "initial probabilities for subsystem 4"
+        },
+        "Sheet5": {
+          "rows_including_title_and_header": 12,
+          "columns": 4,
+          "meaning": "aircraft-specific Weibull parameters for subsystem 1"
+        },
+        "Sheet6": {
+          "rows_including_title_and_header": 12,
+          "columns": 4,
+          "meaning": "aircraft-specific Weibull parameters for subsystem 2"
+        },
+        "Sheet7": {
+          "rows_including_title_and_header": 12,
+          "columns": 4,
+          "meaning": "aircraft-specific Weibull parameters for subsystem 3"
+        },
+        "Sheet8": {
+          "rows_including_title_and_header": 12,
+          "columns": 4,
+          "meaning": "aircraft-specific Weibull parameters for subsystem 4"
+        },
+        "Sheet9": {
+          "rows_including_title_and_header": 22,
+          "columns": 4,
+          "meaning": "maintenance operations, costs (CNY) and durations (min)"
+        },
+        "Sheet10": {
+          "rows_including_title_and_header": 62,
+          "columns": 20,
+          "meaning": "task type, state requirements, duration (s), location (km)"
+        },
+        "Sheet11": {
+          "rows_including_title_and_header": 62,
+          "columns": 6,
+          "meaning": "nominal task benefits or state-dependent benefit inputs"
+        },
+        "Sheet12": {
+          "rows_including_title_and_header": 6,
+          "columns": 6,
+          "meaning": "post-task state utility weights"
+        },
+        "Sheet13": {
+          "rows_including_title_and_header": 12,
+          "columns": 5,
+          "meaning": "per-aircraft capacities by task class"
+        },
+        "Sheet14": {
+          "rows_including_title_and_header": 102,
+          "columns": 8,
+          "meaning": "maintenance restoration probability matrices"
+        },
+        "Sheet15": {
+          "rows_including_title_and_header": 0,
+          "columns": 0,
+          "meaning": "additional workbook information; preserved without reinterpretation"
+        }
+      }
+    }
+  }
+}

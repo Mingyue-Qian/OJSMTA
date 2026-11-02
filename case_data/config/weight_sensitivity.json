@@ -1,0 +1,214 @@
+{
+  "input_workbook": "raw/single_wave.xlsx",
+  "task_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60
+  ],
+  "num_tasks": 60,
+  "seeds": [
+    9200,
+    9201,
+    9202,
+    9203,
+    9204,
+    9205,
+    9206,
+    9207,
+    9208,
+    9209,
+    9210,
+    9211,
+    9212,
+    9213,
+    9214,
+    9215,
+    9216,
+    9217,
+    9218,
+    9219
+  ],
+  "replicates_per_scheme": 20,
+  "evaluation_budget_per_run": 10000,
+  "population": 50,
+  "criterion_order": [
+    "R_norm",
+    "V_norm",
+    "T_norm",
+    "C_norm"
+  ],
+  "reference_weights": [
+    0.4,
+    0.3,
+    0.2,
+    0.1
+  ],
+  "schemes": {
+    "A": {
+      "raw_weights": [
+        0.4,
+        0.3,
+        0.2,
+        0.1
+      ],
+      "weights": [
+        0.4,
+        0.3,
+        0.2,
+        0.1
+      ],
+      "description": "current reference"
+    },
+    "B": {
+      "raw_weights": [
+        0.3,
+        0.3,
+        0.2,
+        0.1
+      ],
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.22222222222222224,
+        0.11111111111111112
+      ],
+      "description": "reduce raw task-benefit weight by 0.1"
+    },
+    "C": {
+      "raw_weights": [
+        0.4,
+        0.2,
+        0.2,
+        0.1
+      ],
+      "weights": [
+        0.4444444444444445,
+        0.22222222222222224,
+        0.22222222222222224,
+        0.11111111111111112
+      ],
+      "description": "reduce raw post-task-health weight by 0.1"
+    },
+    "D": {
+      "raw_weights": [
+        0.4,
+        0.3,
+        0.3,
+        0.1
+      ],
+      "weights": [
+        0.36363636363636365,
+        0.2727272727272727,
+        0.2727272727272727,
+        0.09090909090909091
+      ],
+      "description": "increase raw return-dispersion weight by 0.1"
+    },
+    "E": {
+      "raw_weights": [
+        0.4,
+        0.3,
+        0.2,
+        0.2
+      ],
+      "weights": [
+        0.36363636363636365,
+        0.2727272727272727,
+        0.18181818181818182,
+        0.18181818181818182
+      ],
+      "description": "increase raw maintenance-cost weight by 0.1"
+    }
+  },
+  "normalization": "alpha_j = raw_j / sum(raw)",
+  "shared_settings": {
+    "maintenance_window_s": 7200,
+    "completion_limit_s": 180000,
+    "return_time_reference_s": 180000,
+    "stations": 3,
+    "preparation_s": 1200,
+    "launch_s": 90,
+    "recovery_s": 90,
+    "transfer_s": 1200,
+    "speed_km_s": 0.3,
+    "maintenance_budget_CNY": 5000000,
+    "weibull_time_unit": "hour",
+    "initial_effective_age_s": 0,
+    "task_impact": 5,
+    "total_task_cap_per_aircraft": 7,
+    "require_all_aircraft_assignment": true,
+    "health_admission": "none"
+  },
+  "optimizer": "CGA_WeightSensitivity_V6 using unchanged cga_core_v5",
+  "source_run": "CGA_WeightSensitivity_V6_20261102_180639_049282",
+  "input_hashes_and_versions": {
+    "version": "CGA_WeightSensitivity_V6",
+    "data_sha256": "b975d9fc5c1b1422ce549756b7d435ec9b2d145da984df120c55410e62460183",
+    "core_sha256": "ea03c593184fcab8e74e4bd05c1600ccd9633dafb1f68e54e43e7b38d0516c31",
+    "driver_sha256": "2120c844fa9ef818d2a8a76bfcf2619f499288d93fc4df1d1d779e2660a30e66",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.3.5",
+    "matplotlib": "3.11.2",
+    "openpyxl": "3.1.5",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "scoring": "F_alpha uses the optimizing weights; F_ref re-scores the final plan at (0.4,0.3,0.2,0.1), without further optimization.",
+  "timing": "Four parallel workers; wall times are provenance only and are not runtime benchmarks."
+}
